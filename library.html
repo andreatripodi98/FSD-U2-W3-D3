@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Library</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="bg-primary-subtle">
+    <div class="dropdown mt-5 text-end me-5">
+      <button
+        class="btn border-0 dropdown-toggle"
+        type="button"
+        id="cartDropdown"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="bi bi-cart text-dark fs-1"></i>
+        <span id="cart-count" class="badge text-dark border-0 fs-2">0</span>
+      </button>
+      <ul
+        class="dropdown-menu dropdown-menu-end border-0"
+        aria-labelledby="cartDropdown"
+        id="cart-menu"
+        style="box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3)"
+      >
+        <li><span class="dropdown-item-text text-muted">Cart is empy</span></li>
+      </ul>
+    </div>
+    <div class="container mt-5 d-flex justify-content-center">
+      <div class="row" id="book-shelf"></div>
+      <div class="row" id="book-row"></div>
+    </div>
+
+    <script src="./js/library.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
