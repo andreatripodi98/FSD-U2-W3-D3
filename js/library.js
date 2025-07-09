@@ -1,4 +1,6 @@
 localStorage.removeItem("cart");
+// ^ REFRESH CART//
+//FETCH BOOKS//
 
 const getBooks = function () {
   fetch("https://striveschool-api.herokuapp.com/books")
@@ -11,15 +13,14 @@ const getBooks = function () {
       }
     })
     .then((library) => {
-      console.log(library);
+        console.log(library);
+        //RANDOM CARD X 3//
       for (let i = 0; i < 3; i++) {
         const randomIndex = Math.floor(Math.random() * library.length);
         const randomBook = library[randomIndex];
         const shelf = document.getElementById("book-shelf");
-
         const col = document.createElement("div");
         col.className = "col d-flex";
-
         col.innerHTML = `
     <div class="card border-0 h-100 d-flex flex-column" style="width: 18rem;">
       <img
@@ -62,7 +63,7 @@ const getBooks = function () {
     });
 };
 getBooks();
-
+//CART//
 document.addEventListener("click", function (e) {
   const btn = e.target.closest(".add-to-cart");
   if (!btn) return;
